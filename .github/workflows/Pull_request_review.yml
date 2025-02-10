@@ -1,0 +1,21 @@
+name: PR Review Actions
+
+on:
+  pull_request_review:
+    types: [submitted, dismissed]  # Trigger action on review submission or dismissal
+
+jobs:
+  review-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check PR review status
+        run: |
+          REVIEW_STATE=$(gh pr view ${{ github.event.pull_request.number }} --json reviewRequests -q '.reviewRequests[0].state')
+          if [[ "$REVIEW_STATE" == "APPROVED" ]]; then
+            echo "PR has been approved!"
+          else
+            echo "PR has not been approved yet."
+          fi
