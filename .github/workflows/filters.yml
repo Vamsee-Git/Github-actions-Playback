@@ -9,4 +9,4 @@ jobs:
   echo-tag-job:
     runs-on: ubuntu-latest
     steps:
-     - run: echo " job is running"
+     - run: echo "${{github.event_name}}"
