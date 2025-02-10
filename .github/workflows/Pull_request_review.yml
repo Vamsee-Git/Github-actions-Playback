@@ -1,4 +1,4 @@
-name: PR Review Actions
+name: PR Review Actions.
 
 on:
   pull_request_review:
