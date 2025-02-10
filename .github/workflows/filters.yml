@@ -1,0 +1,12 @@
+name: filters
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v1.0.0
+jobs:
+  echo-tag-job:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo " job is running"
