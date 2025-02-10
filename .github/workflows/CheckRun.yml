@@ -1,4 +1,4 @@
-name: Check Run Workflow
+name: Check Run Workflow.
 
 on:
   check_run:
