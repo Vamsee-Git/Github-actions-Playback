@@ -22,4 +22,4 @@ jobs:
 
       - name: Print greeting message
         run: |
-          echo "${{ github.event.inputs.greeting }} ${{ github.event.inputs.name }}!"
+          echo "${{inputs.greeting }} ${{inputs.name }}!"
