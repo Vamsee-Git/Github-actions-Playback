@@ -1,0 +1,21 @@
+name: Action Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Run my custom action
+        uses: ./  # Path to the action folder in the repo
+        with:
+          example_input: 'Hello World'
+        
+      - name: Output result
+        run: echo "Result: ${{ steps.run-action.outputs.result }}"
