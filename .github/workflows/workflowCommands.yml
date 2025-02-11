@@ -1,6 +1,6 @@
 name: Workflow Commands Example.
 
-on: [push]
+on: push
 
 jobs:
   build:
@@ -13,4 +13,10 @@ jobs:
       run: echo "::error file=app.js,line=1::Missing semicolon"
     - name: setup debug message.
       run: echo "::debug::Set the Octocat variable"
+    - name: create annotation for notice
+      run: echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+    - name: create annotation for warning
+      run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+
+
 
