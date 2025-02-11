@@ -9,10 +9,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Create annotation for build error
-      run: echo "::error file=app.js,line=1::Missing semicolon"
     - name: setup debug message.
       run: echo "::debug::Set the Octocat variable"
+    - name: Create annotation for build error
+      run: echo "::error file=app.js,line=1::Missing semicolon"
     - name: create annotation for notice
       run: echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
     - name: create annotation for warning
