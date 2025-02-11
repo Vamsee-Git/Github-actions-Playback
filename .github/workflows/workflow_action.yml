@@ -1,21 +1,26 @@
-name: Example Workflow
-
-on:
-  push:
-    branches:
-      - main
-
+name: "Demo Workflow"
+ 
+on: [push]
+ 
 jobs:
-  run-action:
+  greet_job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        
-      - name: Run my custom action
-        uses: ./  # Path to the action folder in the repo
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          example_input: 'Hello World'
-        
-      - name: Output result
-        run: echo "Result: ${{ steps.run-action.outputs.result }}"
+          node-version: '16'  # Specify Node.js version (compatible with your action)
+ 
+      - name: Install dependencies
+        run: npm install
+ 
+      - name: Run custom action
+        uses: ./  # Use the action from the root directory
+        with:
+          name: "Alice"
+ 
+      - name: Print Greeting
+        run: echo "Greeting Message - ${{ steps.greet_job.outputs.greeting }}"
