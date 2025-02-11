@@ -1,7 +1,7 @@
 name: "Greet User"
 description: "Sends a greeting message"
 inputs:
-  name:
+  name: Vamsee-Git
     description: "User's name"
     required: true
 outputs:
