@@ -1,18 +1,13 @@
-name: 'My Custom Action'
-description: 'This action does something amazing'
-author: 'Vamsee'
+name: "Greet User"
+description: "Sends a greeting message"
 inputs:
-  example_input:
-    description: 'This is an input parameter for the action'
+  name:
+    description: "User's name"
     required: true
-    default: 'default_value'
 outputs:
-  result:
-    description: 'The result of the action'
+  greeting:
+    description: "The greeting message"
 runs:
-  using: 'node16'  # You can use 'node12', 'node16', 'python3', or other supported environments
-  main: 'dist/main.js'  # Path to your main script that will be executed
-branding:
-  icon: '✨'  # Custom icon for your action
-  color: 'blue'  # Custom color for your action in the marketplace
+  using: "node16"
+  main: "index.js"
 
