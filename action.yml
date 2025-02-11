@@ -1,10 +1,5 @@
 name: "Greet User"
 description: "Sends a greeting message"
-inputs:
-  name:
-    description: "User's name"
-    required: true
-    default: "Vamsee-Git"
 outputs:
   greeting:
     description: "The greeting message"
