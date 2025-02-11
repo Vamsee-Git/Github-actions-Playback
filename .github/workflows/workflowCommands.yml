@@ -24,6 +24,11 @@ jobs:
           echo "second command"
           echo "third command" 
           echo "::endgroup::"
+    - name: Add mask to the string
+      run: echo "::add-mask::$MY_NAME"
+      env:
+        MY_NAME: "Mona The Octocat"
+
 
 
 
