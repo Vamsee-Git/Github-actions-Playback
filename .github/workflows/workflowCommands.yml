@@ -1,4 +1,4 @@
-name: Workflow Commands Example
+name: Workflow Commands Example.
 
 on: [push]
 
