@@ -1,6 +1,7 @@
 name: "Demo Workflow"
  
-on: [push]
+on: 
+ workflow_dispatch:
  
 jobs:
   greet_job:
