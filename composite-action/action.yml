@@ -10,7 +10,9 @@ runs:
     # Step 1: Checkout the code (optional, based on what you need)
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: Make script.sh executable
+      run: chmod +x script.sh
+      shell: bash
     # Step 2: Run a custom script
     - name: Run custom script
       shell: bash
