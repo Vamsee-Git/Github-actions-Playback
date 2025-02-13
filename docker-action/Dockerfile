@@ -7,8 +7,11 @@ RUN apt-get update && apt-get install -y curl
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Copy any required files
+# Copy the script into the container
 COPY script.sh .
+
+# Make sure the script is executable
+RUN chmod +x script.sh
 
 # Set the entry point to the script
 ENTRYPOINT ["bash", "script.sh"]
