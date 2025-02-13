@@ -1,0 +1,12 @@
+name: 'My Docker Action'
+description: 'This is a simple Docker-based custom action.'
+inputs:
+  example_input:
+    description: 'The input string to pass to the action'
+    required: true
+    default: 'World'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.example_input }}
