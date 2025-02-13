@@ -15,4 +15,4 @@ jobs:
       - name: Run Docker Action
         uses: ./docker-action  # Use the local path or a full GitHub repo path (e.g., your-username/your-repo@main)
         with:
-          example_input: 'GitHub Actions'
+          example_input: 
