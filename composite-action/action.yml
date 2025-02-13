@@ -13,10 +13,12 @@ runs:
 
     # Step 2: Run a custom script
     - name: Run custom script
+      shell: bash
       run: |
         echo "Running script.sh with greeting: ${{ inputs.greeting }}"
         ./script.sh "${{ inputs.greeting }}"
 
     # Step 3: You can add more steps as needed
     - name: Another step (example)
+      shell: bash
       run: echo "Another step after running the script"
