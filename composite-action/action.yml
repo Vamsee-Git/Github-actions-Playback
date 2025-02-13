@@ -11,7 +11,7 @@ runs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Make script.sh executable
-      run: chmod +x script.sh
+      run: chmod +x /composite-action/script.sh
       shell: bash
     # Step 2: Run a custom script
     - name: Run custom script
