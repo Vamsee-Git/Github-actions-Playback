@@ -12,6 +12,6 @@ COPY script.sh .
 
 # Make sure the script is executable
 RUN chmod +x script.sh
-
+RUN ls -l /usr/src/app
 # Set the entry point to the script
 ENTRYPOINT ["bash", "script.sh"]
