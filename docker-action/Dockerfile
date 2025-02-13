@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl
 WORKDIR /usr/src/app
 
 # Copy any required files
-COPY script.sh .
+COPY /docker-action/script.sh .
 
 # Set the entry point to the script
 ENTRYPOINT ["bash", "script.sh"]
