@@ -1,0 +1,22 @@
+name: 'My Composite Action'
+description: 'A simple composite action to run multiple steps'
+inputs:
+  greeting:
+    description: 'The greeting to print'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    # Step 1: Checkout the code (optional, based on what you need)
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Run a custom script
+    - name: Run custom script
+      run: |
+        echo "Running script.sh with greeting: ${{ inputs.greeting }}"
+        ./script.sh "${{ inputs.greeting }}"
+
+    # Step 3: You can add more steps as needed
+    - name: Another step (example)
+      run: echo "Another step after running the script"
